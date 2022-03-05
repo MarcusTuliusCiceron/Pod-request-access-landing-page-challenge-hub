@@ -1,0 +1,153 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+    line-height: 1;
+    background-color: $bgColor;
+    color: white;
+    font-family: 'Chivo', sans-serif;
+    overflow-x: hidden;
+
+}
+
+*, *::before, *::after { 
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.card_border{
+    margin: auto;
+
+}
+.card{
+    width: 1275px;
+    height: 640px;
+    max-width: 95%;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url(/image-host.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @include breakpoint-down(medium){
+        width: 729px;
+        height: 768px;
+    }
+
+    
+    .title{
+        position: absolute;
+        top: -30px;
+    }
+    .front_card{
+        width: 723px;
+        height: 509px;
+        background-color: $bgColor;
+        padding-right: 30px;
+        h1{
+            color: $green;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 37px;
+            margin-top: 100px;
+            margin-bottom: 45px;
+            em{
+                color: white;
+                font-style: normal;
+            }
+        }
+        p{
+            font-weight: 300;
+            margin-right: 250px;
+            line-height: 1.5;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        .button{
+            display:flex;
+            flex-direction:row;
+            padding:5px;
+            //margin-bottom: 64px;
+            width: 427px;
+            height: 56px;
+            background-color: $button;
+            border-radius: 30px;
+            overflow: hidden;
+            
+            input {
+                flex-grow:2;
+                border:none;
+                background-color: $button;
+                //color: $white-t;
+            }
+            input:focus{
+                border: none;
+                outline: none;
+            }
+
+            button {
+                background:$green;
+                border-radius: 30px;
+                color:white;
+                width: 160px;
+                color: $bgColor;
+                font-weight: 700;
+                font-size: 14px;
+                border: none;
+                
+                &:hover{
+                    cursor: pointer;
+                    background-color: $paleGreen;
+                }
+                &:active{
+                    box-shadow: 4px 4px 18px black inset;
+                }
+                
+            }
+            
+        }
+        .error{
+            
+            display: block;
+            color: red;
+            font-weight: 600;
+            font-size: 13px;
+            margin-left: 10px;
+            margin-bottom: 40px;
+            
+        }
+        .logos{
+            display: flex;
+            justify-content: space-around;
+            max-width: 550px;
+        }
+    }
+    .dots{
+        position: absolute;
+        width: 232px;
+        height: 104px;
+        background-image: url(/bg-pattern-dots.svg);
+        background-repeat: no-repeat;
+        left: 100%;
+        transform: translateX(-100%) translateY(50%);
+    }
+}
+
+.visible{
+    visibility: hidden;
+}

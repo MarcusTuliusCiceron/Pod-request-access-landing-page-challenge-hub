@@ -1,0 +1,181 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  line-height: 1;
+  background-color: #121725;
+  color: white;
+  font-family: 'Chivo', sans-serif;
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+input[placeholder], [placeholder], *[placeholder] {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card_border {
+  margin: auto;
+}
+
+.card {
+  width: 1275px;
+  height: 640px;
+  max-width: 95%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  background-image: url(/image-host.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+@media (max-width: 47.9375em) {
+  .card {
+    width: 729px;
+    height: 768px;
+  }
+}
+
+.card .title {
+  position: absolute;
+  top: -30px;
+}
+
+.card .front_card {
+  width: 723px;
+  height: 509px;
+  background-color: #121725;
+  padding-right: 30px;
+}
+
+.card .front_card h1 {
+  color: #54E6AF;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 37px;
+  margin-top: 100px;
+  margin-bottom: 45px;
+}
+
+.card .front_card h1 em {
+  color: white;
+  font-style: normal;
+}
+
+.card .front_card p {
+  font-weight: 300;
+  margin-right: 250px;
+  line-height: 1.5;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.card .front_card .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px;
+  width: 427px;
+  height: 56px;
+  background-color: #2C344B;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.card .front_card .button input {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  border: none;
+  background-color: #2C344B;
+}
+
+.card .front_card .button input:focus {
+  border: none;
+  outline: none;
+}
+
+.card .front_card .button button {
+  background: #54E6AF;
+  border-radius: 30px;
+  color: white;
+  width: 160px;
+  color: #121725;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+}
+
+.card .front_card .button button:hover {
+  cursor: pointer;
+  background-color: #B3FFE2;
+}
+
+.card .front_card .button button:active {
+  -webkit-box-shadow: 4px 4px 18px black inset;
+          box-shadow: 4px 4px 18px black inset;
+}
+
+.card .front_card .error {
+  display: block;
+  color: red;
+  font-weight: 600;
+  font-size: 13px;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
+
+.card .front_card .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 550px;
+}
+
+.card .dots {
+  position: absolute;
+  width: 232px;
+  height: 104px;
+  background-image: url(/bg-pattern-dots.svg);
+  background-repeat: no-repeat;
+  left: 100%;
+  -webkit-transform: translateX(-100%) translateY(50%);
+          transform: translateX(-100%) translateY(50%);
+}
+
+.visible {
+  visibility: hidden;
+}
+/*# sourceMappingURL=style.css.map */
