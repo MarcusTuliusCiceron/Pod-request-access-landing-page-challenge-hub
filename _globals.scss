@@ -37,7 +37,7 @@ body{
     position: relative;
     display: flex;
     flex-direction: column-reverse;
-    background-image: url(/image-host.jpg);
+    background-image: url(image-host.jpg);
     background-repeat: no-repeat;
     background-position: right;
     margin: auto;
@@ -45,7 +45,7 @@ body{
     @include breakpoint-down(medium){
         width: 729px;
         height: 767px;
-        background-image: url(/image-host-tablet.jpg);
+        background-image: url(image-host-tablet.jpg);
         border: solid 1px blue;
         margin-top: 0;
     }
@@ -250,7 +250,7 @@ body{
         position: absolute;
         width: 232px;
         height: 104px;
-        background-image: url(/bg-pattern-dots.svg);
+        background-image: url(bg-pattern-dots.svg);
         background-repeat: no-repeat;
         left: 100%;
         transform: translateX(-100%) translateY(50%);
