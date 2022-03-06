@@ -29,10 +29,7 @@ body{
     align-items: center;
 }
 
-.card_border{
-    margin: auto;
 
-}
 .card{
     width: 1275px;
     height: 640px;
@@ -43,22 +40,33 @@ body{
     background-image: url(/image-host.jpg);
     background-repeat: no-repeat;
     background-position: right;
+    margin: auto;
 
     @include breakpoint-down(medium){
         width: 729px;
-        height: 768px;
+        height: 767px;
+        background-image: url(/image-host-tablet.jpg);
+        border: solid 1px blue;
+        margin-top: 0;
     }
 
     
     .title{
         position: absolute;
         top: -30px;
+        @include breakpoint-down(medium){
+            top: 50px;
+        }
     }
     .front_card{
         width: 723px;
         height: 509px;
         background-color: $bgColor;
         padding-right: 30px;
+        @include breakpoint-down(medium){
+            width: 674px;
+            border: solid 1px red;
+        }
         h1{
             color: $green;
             font-weight: 300;
@@ -77,6 +85,9 @@ body{
             line-height: 1.5;
             font-size: 18px;
             margin-bottom: 40px;
+            @include breakpoint-down(medium){
+                margin-right: 200px;
+            }
         }
         .button{
             display:flex;
@@ -121,7 +132,7 @@ body{
             }
             
         }
-        .error{
+        .confirmation{
             
             display: block;
             color: red;
@@ -129,6 +140,7 @@ body{
             font-size: 13px;
             margin-left: 10px;
             margin-bottom: 40px;
+            visibility: hidden;
             
         }
         .logos{
@@ -145,9 +157,20 @@ body{
         background-repeat: no-repeat;
         left: 100%;
         transform: translateX(-100%) translateY(50%);
+        @include breakpoint-down(medium){
+            left: 0;
+            transform: translateX(0%) translateY(150px);
+        }
     }
 }
 
 .visible{
-    visibility: hidden;
+    visibility: visible;
+}
+.valid{
+    color: $green;
+    content: 'Email sent';
+}
+.invalid{
+    color: red;
 }
