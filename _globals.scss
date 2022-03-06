@@ -219,26 +219,35 @@ body{
             max-width: 550px;
             align-items: center;
             position: relative;
-            top: -270px;
+            @include breakpoint-down(small){
+                top: -270px;
+            }
+            
             
             .img{
-                @include breakpoint-down(small){
-                    &_1{
+                &_1{
+                    @include breakpoint-down(small){
                         max-width: 55px;
                         max-height: 20px;
-                    }
-                    &_2{
+                    } 
+                }
+                &_2{
+                    @include breakpoint-down(small){
                         max-width: 48px;
                         max-height: 20px;
-                    }
-                    &_3{
+                    } 
+                }
+                &_3{
+                    @include breakpoint-down(small){
                         max-width: 74px;
                         max-height: 15px;
-                    }
-                    &_4{
+                    } 
+                }
+                &_4{
+                    @include breakpoint-down(small){
                         max-width: 78px;
                         max-height: 16px;
-                    }
+                    } 
                 }
             }
             
