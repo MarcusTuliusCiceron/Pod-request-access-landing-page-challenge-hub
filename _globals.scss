@@ -205,7 +205,15 @@ body{
             margin-left: 10px;
             margin-bottom: 40px;
             visibility: hidden;
-            
+        }
+        .visible{
+            visibility: visible;
+        }
+        .valid{
+            color: $green;
+        }
+        .invalid{
+            color: red;
         }
         .logos{
             display: flex;
@@ -256,13 +264,4 @@ body{
     }
 }
 
-.visible{
-    visibility: visible;
-}
-.valid{
-    color: $green;
-    content: 'Email sent';
-}
-.invalid{
-    color: red;
-}
+

@@ -279,6 +279,18 @@ body {
   visibility: hidden;
 }
 
+.card .front_card .visible {
+  visibility: visible;
+}
+
+.card .front_card .valid {
+  color: #54E6AF;
+}
+
+.card .front_card .invalid {
+  color: red;
+}
+
 .card .front_card .logos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,18 +347,5 @@ body {
   .card .dots {
     display: none;
   }
-}
-
-.visible {
-  visibility: visible;
-}
-
-.valid {
-  color: #54E6AF;
-  content: 'Email sent';
-}
-
-.invalid {
-  color: red;
 }
 /*# sourceMappingURL=style.css.map */
