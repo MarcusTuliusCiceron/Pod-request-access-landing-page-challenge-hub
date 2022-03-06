@@ -49,6 +49,14 @@ body{
         border: solid 1px blue;
         margin-top: 0;
     }
+    @include breakpoint-down(small){
+        background-image: none;
+        margin-top: 62px;
+        flex-direction: column;
+        justify-content:start;
+        align-items: center;
+        width: 375px;
+    }
 
     
     .title{
@@ -56,6 +64,12 @@ body{
         top: -30px;
         @include breakpoint-down(medium){
             top: 50px;
+        }
+        @include breakpoint-down(medium){
+            top: 0;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
     .front_card{
@@ -66,6 +80,11 @@ body{
         @include breakpoint-down(medium){
             width: 674px;
             border: solid 1px red;
+        }
+        @include breakpoint-down(small){
+            width: 327px;
+            max-width: 100%;
+            padding-right: 0px;
         }
         h1{
             color: $green;
@@ -78,6 +97,12 @@ body{
                 color: white;
                 font-style: normal;
             }
+            @include breakpoint-down(small){
+                margin-top: 84px;
+                margin-bottom: 31px;
+                font-size: 26px;
+                text-align: center;
+            }
         }
         p{
             font-weight: 300;
@@ -87,6 +112,12 @@ body{
             margin-bottom: 40px;
             @include breakpoint-down(medium){
                 margin-right: 200px;
+            }
+            @include breakpoint-down(small){
+                margin: 0;
+                text-align: center;
+                font-size: 17px;
+                margin-bottom: 105px;
             }
         }
         .button{
@@ -99,27 +130,37 @@ body{
             background-color: $button;
             border-radius: 30px;
             overflow: hidden;
+            @include breakpoint-down(small){
+                max-width: 100%;
+            }
             
             input {
                 flex-grow:2;
                 border:none;
                 background-color: $button;
+                @include breakpoint-down(small){
+                    text-align: center;
+                }
                 //color: $white-t;
             }
             input:focus{
                 border: none;
                 outline: none;
+                text-align: left;
             }
 
             button {
                 background:$green;
                 border-radius: 30px;
-                color:white;
                 width: 160px;
                 color: $bgColor;
                 font-weight: 700;
                 font-size: 14px;
                 border: none;
+                display: block;
+                @include breakpoint-down(small){
+                    display: none;
+                }
                 
                 &:hover{
                     cursor: pointer;
@@ -129,8 +170,31 @@ body{
                     box-shadow: 4px 4px 18px black inset;
                 }
                 
+            }  
+        }
+        .button_2{
+            background:$green;
+            border-radius: 30px;
+            color:white;
+            width: 100%;
+            color: $bgColor;
+            font-weight: 700;
+            font-size: 14px;
+            border: none;
+            height: 56px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            display: none;
+            &:hover{
+                cursor: pointer;
+                background-color: $paleGreen;
             }
-            
+            &:active{
+                box-shadow: 4px 4px 18px black inset;
+            }
+            @include breakpoint-down(small){
+                display: block;
+            }
         }
         .confirmation{
             
@@ -147,6 +211,31 @@ body{
             display: flex;
             justify-content: space-around;
             max-width: 550px;
+            align-items: center;
+            position: relative;
+            top: -270px;
+            
+            .img{
+                @include breakpoint-down(small){
+                    &_1{
+                        max-width: 55px;
+                        max-height: 20px;
+                    }
+                    &_2{
+                        max-width: 48px;
+                        max-height: 20px;
+                    }
+                    &_3{
+                        max-width: 74px;
+                        max-height: 15px;
+                    }
+                    &_4{
+                        max-width: 78px;
+                        max-height: 16px;
+                    }
+                }
+            }
+            
         }
     }
     .dots{
@@ -160,6 +249,9 @@ body{
         @include breakpoint-down(medium){
             left: 0;
             transform: translateX(0%) translateY(150px);
+        }
+        @include breakpoint-down(small){
+            display: none;
         }
     }
 }

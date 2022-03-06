@@ -62,6 +62,24 @@ body {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .card {
+    background-image: none;
+    margin-top: 62px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 375px;
+  }
+}
+
 .card .title {
   position: absolute;
   top: -30px;
@@ -70,6 +88,16 @@ body {
 @media (max-width: 67.5em) {
   .card .title {
     top: 50px;
+  }
+}
+
+@media (max-width: 67.5em) {
+  .card .title {
+    top: 0;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 
@@ -87,6 +115,14 @@ body {
   }
 }
 
+@media (max-width: 39.9375em) {
+  .card .front_card {
+    width: 327px;
+    max-width: 100%;
+    padding-right: 0px;
+  }
+}
+
 .card .front_card h1 {
   color: #54E6AF;
   font-weight: 300;
@@ -101,6 +137,15 @@ body {
   font-style: normal;
 }
 
+@media (max-width: 39.9375em) {
+  .card .front_card h1 {
+    margin-top: 84px;
+    margin-bottom: 31px;
+    font-size: 26px;
+    text-align: center;
+  }
+}
+
 .card .front_card p {
   font-weight: 300;
   margin-right: 250px;
@@ -112,6 +157,15 @@ body {
 @media (max-width: 67.5em) {
   .card .front_card p {
     margin-right: 200px;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .card .front_card p {
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 105px;
   }
 }
 
@@ -131,6 +185,12 @@ body {
   overflow: hidden;
 }
 
+@media (max-width: 39.9375em) {
+  .card .front_card .button {
+    max-width: 100%;
+  }
+}
+
 .card .front_card .button input {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
@@ -139,20 +199,33 @@ body {
   background-color: #2C344B;
 }
 
+@media (max-width: 39.9375em) {
+  .card .front_card .button input {
+    text-align: center;
+  }
+}
+
 .card .front_card .button input:focus {
   border: none;
   outline: none;
+  text-align: left;
 }
 
 .card .front_card .button button {
   background: #54E6AF;
   border-radius: 30px;
-  color: white;
   width: 160px;
   color: #121725;
   font-weight: 700;
   font-size: 14px;
   border: none;
+  display: block;
+}
+
+@media (max-width: 39.9375em) {
+  .card .front_card .button button {
+    display: none;
+  }
 }
 
 .card .front_card .button button:hover {
@@ -163,6 +236,37 @@ body {
 .card .front_card .button button:active {
   -webkit-box-shadow: 4px 4px 18px black inset;
           box-shadow: 4px 4px 18px black inset;
+}
+
+.card .front_card .button_2 {
+  background: #54E6AF;
+  border-radius: 30px;
+  color: white;
+  width: 100%;
+  color: #121725;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  height: 56px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: none;
+}
+
+.card .front_card .button_2:hover {
+  cursor: pointer;
+  background-color: #B3FFE2;
+}
+
+.card .front_card .button_2:active {
+  -webkit-box-shadow: 4px 4px 18px black inset;
+          box-shadow: 4px 4px 18px black inset;
+}
+
+@media (max-width: 39.9375em) {
+  .card .front_card .button_2 {
+    display: block;
+  }
 }
 
 .card .front_card .confirmation {
@@ -182,6 +286,30 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   max-width: 550px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: -270px;
+}
+
+@media (max-width: 39.9375em) {
+  .card .front_card .logos .img_1 {
+    max-width: 55px;
+    max-height: 20px;
+  }
+  .card .front_card .logos .img_2 {
+    max-width: 48px;
+    max-height: 20px;
+  }
+  .card .front_card .logos .img_3 {
+    max-width: 74px;
+    max-height: 15px;
+  }
+  .card .front_card .logos .img_4 {
+    max-width: 78px;
+    max-height: 16px;
+  }
 }
 
 .card .dots {
@@ -200,6 +328,12 @@ body {
     left: 0;
     -webkit-transform: translateX(0%) translateY(150px);
             transform: translateX(0%) translateY(150px);
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .card .dots {
+    display: none;
   }
 }
 
