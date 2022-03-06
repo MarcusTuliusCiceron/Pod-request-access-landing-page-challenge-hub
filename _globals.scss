@@ -46,7 +46,6 @@ body{
         width: 729px;
         height: 767px;
         background-image: url(image-host-tablet.jpg);
-        border: solid 1px blue;
         margin-top: 0;
     }
     @include breakpoint-down(small){
@@ -79,7 +78,6 @@ body{
         padding-right: 30px;
         @include breakpoint-down(medium){
             width: 674px;
-            border: solid 1px red;
         }
         @include breakpoint-down(small){
             width: 327px;
